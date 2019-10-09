@@ -1,0 +1,13 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="loaded" class="page">
+<Page.actionBar>
+        <ActionBar title="User Registration" icon="" class="action-bar">
+        </ActionBar>
+    </Page.actionBar>
+
+    <StackLayout>
+        <Label  text="Enter Registration details" class="h1 text-center"/>
+        <TextField hint="Enter email" keyboardType="email" text="{{email}}" class=""/>
+        <TextField hint="Enter password" text="{{password}}" secure="true" class=""/>
+        <button text="Complete Registration" tap="completeReg"></button>
+    </StackLayout>
+</Page>

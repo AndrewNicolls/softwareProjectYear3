@@ -1,0 +1,11 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
+<Page.actionBar>
+        <ActionBar title="Customer Home" icon="" class="action-bar">
+        
+        </ActionBar>
+    </Page.actionBar>
+
+    <StackLayout>
+        
+    </StackLayout>
+</Page>

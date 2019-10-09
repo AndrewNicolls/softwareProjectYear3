@@ -1,0 +1,19 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
+<Page.actionBar>
+        <ActionBar title="Customer Details" icon="" class="action-bar">
+        </ActionBar>
+    </Page.actionBar>
+
+    <StackLayout>
+        <TextField hint="enter firstname" keyboardType="" text=""/>
+        <TextField hint="enter lastname" keyboardType="" text=""/>
+        <Label text="choose date birth"/>
+        <DatePicker loaded="onDatePickerLoaded" date="{{ date }}" minDate="{{ minDate }}" maxDate="{{ maxDate }}"></DatePicker>
+        <TextField hint="enter" keyboardType="" text=""/>
+        <TextField hint="" keyboardType="" text=""/>
+        <Button text="update"></Button>
+        <Button text="Change Email"></Button>
+        <Button text="Change Password"></Button>
+
+    </StackLayout>
+</Page>

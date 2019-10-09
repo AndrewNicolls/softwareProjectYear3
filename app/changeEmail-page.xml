@@ -1,0 +1,12 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
+<Page.actionBar>
+        <ActionBar title="Email change" icon="" class="action-bar">
+        </ActionBar>
+    </Page.actionBar>
+<StackLayout>
+        <Label  text="Choose a new email" class="h1 text-center"/>
+        <TextField hint="Enter old email" keyboardType="email" text="{{oldEmail}}" class=""/>
+        <TextField hint="Enter new email" keyboardType="email" text="{{newEmail}}" class=""/>
+        <button text="Change email"></button>
+    </StackLayout>
+</Page>

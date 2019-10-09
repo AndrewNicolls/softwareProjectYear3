@@ -1,0 +1,25 @@
+{
+  "nativescript": {
+    "id": "com.year3.project",
+    "tns-android": {
+      "version": "6.0.0"
+    },
+    "tns-ios": {
+      "version": "6.0.1"
+    }
+  },
+  "description": "NativeScript Application",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "repository": "<fill-your-repository-here>",
+  "dependencies": {
+    "nativescript-plugin-firebase": "^9.1.1",
+    "nativescript-theme-core": "~1.0.6",
+    "nativescript-ui-dataform": "^5.1.0",
+    "tns-core-modules": "~6.0.0"
+  },
+  "devDependencies": {
+    "nativescript-dev-webpack": "~1.0.0"
+  },
+  "gitHead": "f28dbc60d74dd2cef4b645afd8fdd63bbb12c73e",
+  "readme": "NativeScript Application"
+}
