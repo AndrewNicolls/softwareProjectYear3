@@ -43,7 +43,16 @@ exports.loginPressed = () => {
         password: bindingContext.get("loginPassword")
       }
     })
-    .then(result => JSON.stringify(result))
+    .then(
+      function(response)
+      {
+        appSettings.setString('user_id',response.uid);
+        var user_id = appSettings.getString('user_id');
+        
+        console.log("User uid:"+user_id);
+      }
+      
+      )
     .then(
       function()
       {
