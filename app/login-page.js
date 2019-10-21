@@ -1,20 +1,19 @@
 var frameModule = require("tns-core-modules/ui/frame");
 const firebase = require("nativescript-plugin-firebase");
-const { fromObject } = require("tns-core-modules/data/observable");
+var { fromObject } = require("tns-core-modules/data/observable");
 var appSettings = require("application-settings");
+var dialogsModule = require("tns-core-modules/ui/dialogs");
 
 
-const loginModel = {
+var loginModel = {
   loginEmail: "",
-  loginPassword: "",
-  userType: ""
+  loginPassword: ""
 }
 
-const bindingContext = fromObject(loginModel);
+user_type=appSettings.getString('user_type');
+var bindingContext = fromObject(loginModel);
 
 exports.loaded = args => {
-  //userType=appSettings.getString("userType", "admin");
-
   const page = args.object;
 
   page.bindingContext = bindingContext;
@@ -33,7 +32,7 @@ exports.forgotPassword = () => {
 
 
 exports.loginPressed = () => {
-  alert(`${bindingContext.get('loginEmail')} and ${bindingContext.get('loginPassword')}`);
+  //alert(`${bindingContext.get('loginEmail')} and ${bindingContext.get('loginPassword')}`);
 
   return firebase.login(
     {
@@ -60,7 +59,10 @@ exports.loginPressed = () => {
         topmost.navigate("customerHome-page");
       }
     )
-    .catch(error => console.log(error));
+    .catch(error => dialogsModule.alert({
+      message: "Unfortunately we could not find your account",
+      okButtonText: "OK"
+    }));
   
 };
 
