@@ -4,7 +4,7 @@ const { fromObject } = require("tns-core-modules/data/observable");
 
 const regmodel = {
   email: "",
-  loginPassword: ""
+  password: ""
 }
 
 const bindingContext = fromObject(regmodel);
@@ -26,15 +26,13 @@ exports.completeReg = () => {
       function (user) {
         console.log({
           title: "User created",
-          message: "email: " + user.email,
-          okButtonText: "Nice!"
+          message: "email: " + user.email
         })
       },
       function (errorMessage) {
         console.log({
           title: "No user created",
-          message: errorMessage,
-          okButtonText: "OK, got it"
+          message: errorMessage
         })
       }
   );
