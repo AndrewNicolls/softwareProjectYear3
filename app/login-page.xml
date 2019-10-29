@@ -11,6 +11,6 @@
         <button text="Login" tap="loginPressed"></button>
         <button text="Register" tap="registerPressed"></button>
         <button text="Forgot Password" tap="forgotPassword"></button>
-        <button text="logout" tap="logoutPressed"></button>
+    
     </StackLayout>
 </Page>

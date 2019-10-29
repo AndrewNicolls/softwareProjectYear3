@@ -10,6 +10,7 @@ var loginModel = {
   loginPassword: ""
 }
 
+var user_id = appSettings.getString('user_id');
 user_type=appSettings.getString('user_type');
 var bindingContext = fromObject(loginModel);
 
@@ -32,7 +33,6 @@ exports.forgotPassword = () => {
 
 
 exports.loginPressed = () => {
-  //alert(`${bindingContext.get('loginEmail')} and ${bindingContext.get('loginPassword')}`);
 
   return firebase.login(
     {
@@ -46,7 +46,7 @@ exports.loginPressed = () => {
       function(response)
       {
         appSettings.setString('user_id',response.uid);
-        var user_id = appSettings.getString('user_id');
+        
         
         console.log("User uid:"+user_id);
       }
@@ -64,12 +64,6 @@ exports.loginPressed = () => {
       okButtonText: "OK"
     }));
   
-};
-
-
-exports.logoutPressed = () => {
-  firebase.logout();
-  alert("log out");
 };
 
 
