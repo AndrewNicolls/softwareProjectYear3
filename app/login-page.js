@@ -11,7 +11,6 @@ var loginModel = {
 }
 
 var user_id = appSettings.getString('user_id');
-user_type=appSettings.getString('user_type');
 var bindingContext = fromObject(loginModel);
 
 exports.loaded = args => {
@@ -48,7 +47,7 @@ exports.loginPressed = () => {
         appSettings.setString('user_id',response.uid);
         
         
-        console.log("User uid:"+user_id);
+        console.log("User uid:"+appSettings.getString('user_id'));
       }
       
       )
