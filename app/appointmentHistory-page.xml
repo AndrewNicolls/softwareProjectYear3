@@ -4,10 +4,16 @@
         </ActionBar>
     </Page.actionBar>
 
-    <StackLayout>
-        
+<TextField text=""/>
 
-    
-       
-    </StackLayout>
+   <GridLayout rows="auto, *" columns="2*, *">
+        <ListView items="{{groceryList}}" id="groceryList" row="1" colSpan="2">
+            <ListView.itemTemplate>
+            <GridLayout columns="*, auto">
+                    <Label text="{{ name }}"/>
+                    <Image src="https://raw.githubusercontent.com/NativeScript/sample-Groceries/end/app/App_Resources/Android/drawable-hdpi/ic_menu_delete.png" ios:visibility="collapsed" col="1" tap="delete" />
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+   </GridLayout>
 </Page>
