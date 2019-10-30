@@ -1,5 +1,6 @@
 const frameModule = require("tns-core-modules/ui/frame");
 var appSettings = require("application-settings");
+const firebase = require("nativescript-plugin-firebase");
 
   exports.goNewAppointment = () => {
     var topmost = frameModule.topmost();
@@ -30,6 +31,7 @@ var appSettings = require("application-settings");
       const button = args.object;
       const page=button.page;
       appSettings.clear;
+      firebase.logout();
       page.frame.navigate({moduleName: "login-page", clearHistory: true});
     }
     exports.logout = outLog;
