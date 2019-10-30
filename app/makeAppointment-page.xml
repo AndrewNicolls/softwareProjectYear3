@@ -7,15 +7,7 @@
     <StackLayout>
         <DatePicker id="date" year="2019" month="1" day="1" ></DatePicker>
         <TimePicker id="time" minute="30" hour="10"></TimePicker>
-
-        <ListView items="{{groceryList}}" itemTap="itemTap">
-            <ListView.itemTemplate>
-            <Label text="{{name}}" horizontalAlignment="left"
-            verticalAlignment="center"/>
-            </ListView.itemTemplate>
-        </ListView>
         <button text ='make appointment' tap="makeAppt"></button>
-    
-       
+     
     </StackLayout>
 </Page>
