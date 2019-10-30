@@ -3,7 +3,7 @@ var observableModule = require ('tns-core-modules/data/observable');
 var appSettings = require("application-settings");
 var page;
 
-  var user_id = appSettings.getString('user_id');
+  
   
   exports.loaded = function (args) {
     page = args.object;
@@ -11,6 +11,7 @@ var page;
 
   exports.makeAppt = () =>
   {
+    var user_id = appSettings.getString('user_id');
     firebase.push(
         '/appointments',
         {
