@@ -7,6 +7,6 @@
         <Label  text="Choose a new email" class="h1 text-center"/>
         <TextField hint="Enter old email" keyboardType="email" text="{{oldEmail}}" class=""/>
         <TextField hint="Enter new email" keyboardType="email" text="{{newEmail}}" class=""/>
-        <button text="Change email"></button>
+        <button text="Change email" tap="changeEmail"></button>
     </StackLayout>
 </Page>
