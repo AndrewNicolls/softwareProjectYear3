@@ -10,7 +10,6 @@ var loginModel = {
   loginPassword: ""
 }
 
-var user_id = appSettings.getString('user_id');
 var bindingContext = fromObject(loginModel);
 
 exports.loaded = args => {
@@ -45,9 +44,9 @@ exports.loginPressed = () => {
       function(response)
       {
         appSettings.setString('user_id',response.uid);
-        
-        
-        console.log("User uid:"+appSettings.getString('user_id'));
+        appSettings.setString('email',response.email);
+        console.log("Email: "+appSettings.getString('email'));
+        console.log("User uid: "+appSettings.getString('user_id'));
       }
       
       )
