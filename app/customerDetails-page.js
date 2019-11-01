@@ -76,4 +76,9 @@ const custDetailmodel = {
         contactNum: bindingContext.get("contactNum")
       }
     );
-    }    
+    }
+
+    exports.goChangeEmail = () =>{
+      var topmost = frameModule.topmost();
+      topmost.navigate("changeEmail-page");
+    }
