@@ -59,7 +59,7 @@ function GroceryListViewModel(items){
       viewModel.delete = function(index) {
         var id = viewModel.getItem(index).appointmentid;
         console.log(""+id);
-        //return firebase.remove("/appointments/"+id+"");
+        return firebase.remove("/appointments/"+id+"");
       };
 
     return viewModel;

@@ -7,6 +7,7 @@
 <TextField text=""/>
 
    <GridLayout rows="auto, *" columns="2*, *">
+   
         <ListView items="{{groceryList}}" id="groceryList" row="1" colSpan="2">
             <ListView.itemTemplate>
             <GridLayout columns="*, auto">

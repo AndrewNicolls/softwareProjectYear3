@@ -12,6 +12,7 @@
         <TextField hint="address" keyboardType="email" text="{{address}}" class=""/>
         <TextField hint="contact number" keyboardType="email" text="{{contactNum}}" class=""/>
        
-        <button text="customer info" tap="onTap"></button>
+        <button text="Update info" tap="onTap"></button>
+        <button text="Change email"></button>
     </StackLayout>
 </Page>

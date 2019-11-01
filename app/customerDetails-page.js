@@ -10,7 +10,7 @@ const custDetailmodel = {
     address: "",
     contactNum: ""
   }
-  var user_id = appSettings.getString('user_id');
+  
   const bindingContext = fromObject(custDetailmodel);
   
   exports.loaded = args => {
@@ -68,7 +68,7 @@ const custDetailmodel = {
   exports.onTap = () => {
 
     firebase.update(
-      '/users/'+user_id,
+      '/users/'+appSettings.getString('user_id'),
       {
         firstname: bindingContext.get("firstname"),
         lastname: bindingContext.get("lastname"),
