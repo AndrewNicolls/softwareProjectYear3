@@ -8,12 +8,6 @@ const firebase = require("nativescript-plugin-firebase");
    
   };
 
-  exports.goBookedAppointment = () => {
-    var topmost = frameModule.topmost();
-    topmost.navigate("upcomingAppointment-page");
-   
-  };
-
   exports.goAppointmentHistory = () => {
     var topmost = frameModule.topmost();
     topmost.navigate("appointmentHistory-page");

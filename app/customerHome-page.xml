@@ -7,7 +7,7 @@
     <StackLayout>
         
         <button text="make appointment" tap="goNewAppointment"></button>
-        <button text="upcoming appointments" tap="goBookedAppointment"></button>
+     
         <button text="appointment history" tap="goAppointmentHistory"></button>
         <button text="edit profile" tap="goInfo"></button>
         <button text="logout" tap="logout"></button>
